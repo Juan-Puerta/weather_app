@@ -17,7 +17,7 @@ const Menu: React.FC = () =>{
 
     const onSearch = async (value: string) => {
         try{
-            const resp = await weatherApi.get(`weather?q=${ value }&APPID=${ apiKey }`)
+            const resp = await weatherApi.get(`data/2.5/weather?q=${ value }&APPID=${ apiKey }`)
             const { temp, feels_like, temp_max, temp_min } = resp.data.main
             const { main, description, icon } = resp.data.weather[0]
             
@@ -40,6 +40,7 @@ const Menu: React.FC = () =>{
                 city_name: resp.data.name,
                 weather: weather,
                 temperature: temperature,
+                timezone: resp.data.timezone,
             }
 
             dispatch(changeCity(city))
