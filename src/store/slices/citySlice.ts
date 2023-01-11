@@ -5,7 +5,12 @@ import { Weather } from '../../models/Weather'
 import { Temperature } from '../../models/Temperature'
 
 const cityWeather: Weather = {}
-const cityTemp: Temperature = {}
+const cityTemp: Temperature = {
+  temp: 0,
+  feels_like: 0,
+  temp_max: 0,
+  temp_min: 0,
+}
 
 const initialState: City = {
   cod: 404,

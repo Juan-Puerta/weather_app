@@ -5,6 +5,6 @@ export interface City{
     cod: number;
     city_name?: string;
     weather?: Weather;
-    temperature?: Temperature;
+    temperature: Temperature;
     timezone: number;
 }

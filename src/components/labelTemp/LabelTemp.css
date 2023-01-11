@@ -1,0 +1,17 @@
+.label-temp{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    width: 55%;
+}
+
+.div-temp{
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.div-med{
+    font-size: 60px;
+    color: grey;
+}

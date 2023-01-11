@@ -1,6 +1,9 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { Button } from 'antd';
+import { RootState } from "../../store/store";
+import { useDispatch, useSelector } from 'react-redux';
 import { changeCity } from '../../store/slices/citySlice';
+import { changeFahrenheit } from '../../store/slices/fahrenheitSlice';
 import { City } from '../../models/City';
 import { Temperature } from '../../models/Temperature';
 import { Weather } from '../../models/Weather';
@@ -13,6 +16,7 @@ const { Search } = Input;
 
 const Menu: React.FC = () =>{
 
+    const { isInFahrenheit } = useSelector((state: RootState) => state.fahrenheit);
     const dispatch = useDispatch();
 
     const onSearch = async (value: string) => {
@@ -53,11 +57,19 @@ const Menu: React.FC = () =>{
     return(
         <div className="menu">
             <h1 className="text-menu">Weather App</h1>
-            <Search 
-                placeholder="Search city" 
-                style={{ width: 150, }} 
-                onSearch={onSearch}
-            />
+            <div className='div-buttoms'>
+                <Search 
+                    placeholder="Search city" 
+                    style={{ width: 150, }} 
+                    onSearch={onSearch}
+                />
+                <Button 
+                    className='buttom-temp'
+                    onClick={() => dispatch(changeFahrenheit())}
+                >
+                    <div>{ isInFahrenheit ? "F°": "C°" }</div>
+                </Button>
+            </div>
         </div>
     )
 }

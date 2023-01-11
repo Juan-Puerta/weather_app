@@ -12,3 +12,17 @@
 .menu h1{
     margin: 0px;
 }
+
+.div-buttoms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttom-temp{
+    width: 33px;
+    font-weight: bold;
+    padding: 0;
+    color: grey;
+}

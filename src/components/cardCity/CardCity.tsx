@@ -1,6 +1,7 @@
 import React from 'react';
 import { RootState } from "../../store/store";
 import { useSelector } from 'react-redux';
+import LabelTemp from '../labelTemp/LabelTemp';
 import "./CardCity.css"
 
 const CardCity: React.FC = () => {
@@ -27,7 +28,7 @@ const CardCity: React.FC = () => {
                         alt="" 
                     />
                 </div>
-                <div className='div-temp'>{`${ city.temperature?.temp }°`}</div>
+                <LabelTemp />
             </div>
         </div>
     )
