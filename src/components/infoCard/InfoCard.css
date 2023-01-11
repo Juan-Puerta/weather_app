@@ -1,0 +1,13 @@
+.info-card{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.row-info{
+    display: flex;
+    justify-content: space-around;
+}
+
+.statistic-info{
+    min-width: 120px;
+}

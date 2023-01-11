@@ -2,11 +2,12 @@ import React from 'react';
 import { RootState } from "../../store/store";
 import { useSelector } from 'react-redux';
 import LabelTemp from '../labelTemp/LabelTemp';
+import InfoCard from '../infoCard/InfoCard';
 import "./CardCity.css"
 
 const CardCity: React.FC = () => {
 
-    const city = useSelector((state: RootState) => state.city)
+    const city = useSelector((state: RootState) => state.city);
 
     const getHour = (timezone: number): string =>{
         const hour: number = Math.floor(((Date.now() + (timezone * 1000)) / (1000 * 60 * 60)) % 24);
@@ -30,8 +31,10 @@ const CardCity: React.FC = () => {
                 </div>
                 <LabelTemp />
             </div>
+            <hr />
+            <InfoCard />
         </div>
-    )
+    );
 }
 
 export default CardCity;

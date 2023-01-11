@@ -22,21 +22,20 @@ const Menu: React.FC = () =>{
     const onSearch = async (value: string) => {
         try{
             const resp = await weatherApi.get(`data/2.5/weather?q=${ value }&APPID=${ apiKey }`)
-            const { temp, feels_like, temp_max, temp_min } = resp.data.main
-            const { main, description, icon } = resp.data.weather[0]
+            const { temp, humidity, pressure } = resp.data.main
+            const { description, icon } = resp.data.weather[0]
             
             const temperature: Temperature = {
                 temp: temp,
-                feels_like: feels_like,
-                temp_max: temp_max,
-                temp_min: temp_min,
+                humidity: humidity,
+                pressure: pressure,
             }
     
             const weather: Weather = {
-                main: main,
                 description: description,
                 icon: icon,
                 wind_speed: resp.data.wind.speed,
+                visibility: resp.data.visibility,
             }
     
             const city: City = {

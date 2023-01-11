@@ -4,14 +4,17 @@ import { City } from '../../models/City'
 import { Weather } from '../../models/Weather'
 import { Temperature } from '../../models/Temperature'
 
-const cityWeather: Weather = {}
+const cityWeather: Weather = {
+  description: "",
+  icon: "04n",
+  wind_speed: 0,
+  visibility: 0,
+}
 const cityTemp: Temperature = {
   temp: 0,
-  feels_like: 0,
-  temp_max: 0,
-  temp_min: 0,
+  humidity: 0,
+  pressure: 0,
 }
-
 const initialState: City = {
   cod: 404,
   city_name: "",
