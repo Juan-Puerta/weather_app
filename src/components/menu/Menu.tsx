@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Button, message, Input } from 'antd';
 import { RootState } from "../../store/store";
 import { useDispatch, useSelector } from 'react-redux';
 import { changeCity } from '../../store/slices/citySlice';
@@ -9,9 +9,8 @@ import { Temperature } from '../../models/Temperature';
 import { Weather } from '../../models/Weather';
 import { weatherApi } from '../../api/weatherApi';
 import { apiKey } from "../../config/apiKey"
-import { Input } from "antd";
-import "./Menu.css"
 import { changeLoading } from '../../store/slices/loadingSlice';
+import "./Menu.css";
 
 const { Search } = Input;
 
@@ -19,6 +18,15 @@ const Menu: React.FC = () =>{
 
     const { isInFahrenheit } = useSelector((state: RootState) => state.fahrenheit);
     const dispatch = useDispatch();
+
+    const [messageApi, contextHolder] = message.useMessage();
+
+    const notFound = () => {
+        messageApi.open({
+          type: 'error',
+          content: 'City not found',
+        });
+    };
 
     const onSearch = async (value: string) => {
         try{
@@ -51,12 +59,13 @@ const Menu: React.FC = () =>{
             dispatch(changeCity(city));
 
         } catch (error){
-            console.log("caca")
+            notFound();
         }
     };
 
     return(
         <div className="menu">
+            {contextHolder}
             <h1 className="text-menu">Weather App</h1>
             <div className='div-buttoms'>
                 <Search 
@@ -72,7 +81,7 @@ const Menu: React.FC = () =>{
                 </Button>
             </div>
         </div>
-    )
-}
+    );
+};
   
 export default Menu;

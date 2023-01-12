@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { RootState } from "./store/store";
 import { useSelector, useDispatch } from 'react-redux';
+import { changeLoading } from './store/slices/loadingSlice';
 import { Layout } from 'antd';
 import Menu from "./components/menu/Menu";
 import CardCity from './components/cardCity/CardCity';
-import NotFound from './components/notFound/NotFound';
+import NotFound from './components/helloImg/HelloImg';
 import Loading from './components/loading/Loading';
 import './App.css';
-import { changeLoading } from './store/slices/loadingSlice';
 
 const { Header, Content } = Layout;
 
@@ -31,7 +31,6 @@ const App: React.FC = () => {
         </Header>
         <Content className='content-layout'>
           {isLoading ? <Loading /> : city.cod === 404 ? <NotFound /> : <CardCity /> }
-          
         </Content>
     </Layout>
   );
