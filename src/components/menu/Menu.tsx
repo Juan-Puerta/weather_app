@@ -11,6 +11,7 @@ import { weatherApi } from '../../api/weatherApi';
 import { apiKey } from "../../config/apiKey"
 import { Input } from "antd";
 import "./Menu.css"
+import { changeLoading } from '../../store/slices/loadingSlice';
 
 const { Search } = Input;
 
@@ -46,7 +47,8 @@ const Menu: React.FC = () =>{
                 timezone: resp.data.timezone,
             }
 
-            dispatch(changeCity(city))
+            dispatch(changeLoading(true));
+            dispatch(changeCity(city));
 
         } catch (error){
             console.log("caca")

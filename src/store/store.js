@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { citySlice } from "./slices/citySlice";
 import { fahrenheitSlice } from "./slices/fahrenheitSlice";
+import { loadingSlice } from "./slices/loadingSlice";
 
 export const store = configureStore({
   reducer: {
     city: citySlice.reducer,
     fahrenheit: fahrenheitSlice.reducer,
+    loading: loadingSlice.reducer,
   },
 });
 
