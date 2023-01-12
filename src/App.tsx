@@ -26,7 +26,7 @@ const App: React.FC = () => {
 
   return(
     <Layout className='app-layout'>
-        <Header style={{ height: 50, background:"#92E3A9"}}>
+        <Header style={{ height: 50, background:"#008A61" }}>
           <Menu />
         </Header>
         <Content className='content-layout'>

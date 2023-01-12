@@ -4,7 +4,14 @@
     margin-right: 40px;
     margin-left: 40px;
     border-radius: 10px;
-    background-color: azure;
+    background-color: #E6F4F1;
+    transition: all 0.8s ease-out;
+    /* border: 1px solid #00C9AB; */
+}
+
+.card-city:hover{
+    box-shadow: 0px 0px 12px 4px #2DC193;
+    transition: all 0.8s ease-out;
 }
 
 .card-title{
@@ -48,9 +55,9 @@ hr{
 
 .weather-img{
     float: right;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
 }
 
 .weather-img:hover{
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
     cursor: pointer;
 }

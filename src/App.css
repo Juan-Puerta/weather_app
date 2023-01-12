@@ -6,5 +6,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: darkgray;
+  /* background-color: #7D91BC; */
+  background-image: linear-gradient(to bottom right, #414756, #A5ABBD);
 }
