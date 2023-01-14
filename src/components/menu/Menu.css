@@ -26,3 +26,18 @@
     padding: 0;
     color: grey;
 }
+
+.content-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.div-logo{
+    height: 40px;
+    width: 40px;
+    background-image: url("../../assets/images/icon.jpg");
+    background-position: center;
+    background-size: cover;
+}

@@ -66,7 +66,10 @@ const Menu: React.FC = () =>{
     return(
         <div className="menu">
             {contextHolder}
-            <h1 className="text-menu">Weather App</h1>
+            <div className='content-logo'>
+                <div className='div-logo'></div>
+                <h1 className="text-menu">Weather App</h1>
+            </div>
             <div className='div-buttoms'>
                 <Search 
                     placeholder="Search city" 
