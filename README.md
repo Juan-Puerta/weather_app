@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+# Weather Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [Project description](#descripción-del-proyecto)
 
-## Available Scripts
+This project was developed for a climate prevention company. This is a website where users can check the weather of any city in the world. So anyone can monitor the weather of their city quickly and easily.
 
-In the project directory, you can run:
+## :hammer:Application features
 
-### `npm start`
+- `Functionality 1`: Allows you to check the weather in any city
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- `Functionality 2`: Allows you to change from degrees Celsius to degrees Fahrenheit
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- `Functionality 3`: Displays the current time of the consulted city
 
-### `npm test`
+- `Functionality 4`: Displays weather characteristics such as humidity, wind speed, atmospheric pressure, and visibility range
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Open and run the project
 
-### `npm run build`
+- `Step 1`: Clone the project on your local computer
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `Step 2`: Create a folder called "config" inside the folder "src"
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ![img1](https://user-images.githubusercontent.com/42070035/212448689-7e724c75-8282-4212-931c-688d9e7896e7.PNG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `Step 3`: Inside the "config" folder create a file with .ts extension named "apiKey"
 
-### `npm run eject`
+    ![img2](https://user-images.githubusercontent.com/42070035/212448804-576b4d05-1086-4000-be18-94c8c187dd05.PNG)
+    
+- `Step 4`: Open the file you created and insert inside the quotes the API key given to you by OpenWeatherMap
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    ![image](https://user-images.githubusercontent.com/42070035/212448983-d0a0b6ef-fcfe-4ced-9afd-dd5f4b018188.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `Step 5`: Open VS Code and in the terminal run the following command: npm install react-scripts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `Step 6`: Finally, run the npm start command and you can enjoy the application
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## :computer:Technologies used
 
-## Learn More
+- React.JS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- TypeScript
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Redux - Toolkit
+
+- Ant Desing
+
+## :adult:Autor
+
+[Juan Puerta](https://github.com/Juan-Puerta)
